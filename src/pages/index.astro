@@ -1,0 +1,203 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import { SITE, SOCIALS } from "@consts";
+import TwinklingStars from "@components/TwinklingStars.astro";
+import MeteorShower from "@components/MeteorShower.astro";
+import TabsComponent from "@components/TabComponent";
+---
+
+<PageLayout title="Home" description={SITE.DESCRIPTION}>
+  <!-- Light Mode: Particles -->
+  <div class="absolute inset-0 block dark:hidden">
+    <div id="particles1" class="fixed inset-0"></div>
+    <div id="particles2" class="fixed inset-0"></div>
+    <div id="particles3" class="fixed inset-0"></div>
+  </div>
+
+  <!-- Dark Theme: Stars -->
+  <div class="absolute inset-0 bg-black hidden dark:block">
+    <div id="stars1" class="fixed inset-0"></div>
+    <div id="stars2" class="fixed inset-0"></div>
+    <div id="stars3" class="fixed inset-0"></div>
+  </div>
+
+  <!-- Dark Theme: Twinkling Stars / Metors -->
+  <div id="galaxy" class="fixed inset-0">
+    <div class="hidden dark:block">
+      <TwinklingStars />
+      <MeteorShower />
+    </div>
+  </div>
+
+  <script is:inline src="/js/bg.js"></script>
+
+  <!-- HERO -->
+  <section class="relative h-screen w-full">
+    <div
+      id="planetcont"
+      class="animate absolute inset-0 top-1/4 overflow-hidden"
+    >
+      <div
+        id="crescent"
+        class="absolute top-3/4 left-1/2 -translate-x-1/2 w-[250vw] min-h-[100vh] aspect-square rounded-full p-[1px] bg-gradient-to-b from-black/25 dark:from-white/75 from-0% to-transparent to-5%"
+      >
+        <div
+          id="planet"
+          class="w-full h-full bg-white dark:bg-black rounded-full p-[1px] overflow-hidden flex justify-center"
+        >
+          <div
+            id="blur"
+            class="w-full h-20 rounded-full bg-neutral-900/25 dark:bg-white/25 blur-3xl"
+          >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="animate absolute h-full w-full flex items-center justify-center"
+    >
+      <div class="relative w-full h-full flex items-center justify-center">
+        <div class="p-5 text-center">
+          <!-- <p
+            class="animated text-lg md:text-xl lg:text-2xl font-semibold opacity-75"
+          >
+            Design partners for next-gen tech
+          </p> -->
+          <p
+            class="animated text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-black dark:text-white"
+          >
+            Design partners for next-gen tech
+          </p>
+          <!-- <p class="animated text-sm md:text-base lg:text-lg opacity-75">
+            Design visionaries shaping tomorrow's tech
+          </p> -->
+          <div
+            id="ctaButtons"
+            class="animated flex flex-wrap gap-4 justify-center mt-5"
+          >
+            <a
+              href="/blog"
+              class="py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend"
+            >
+              Read my blog
+            </a>
+            <a
+              href="/work"
+              class="py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend"
+            >
+              View my work
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="relative bg-black">
+    <div class="absolute -top-10 h-20 bg-black blur-2xl w-full"></div>
+    <section
+      class="flex flex-col justify-between bg-black p-8 md:p-16 space-y-12 md:space-y-0 h-auto md:h-[28rem]"
+    >
+      <h1
+        class="text-2xl text-center  md:text-3xl text-white font-semibold"
+      >
+        Growth starts with a strong foundation. <br />We design it, you build on
+        it.
+      </h1>
+
+      <div
+        class="flex flex-col gap-6 md:flex-row items-center md:justify-evenly"
+      >
+        <div class="w-full md:w-[33.3%] space-y-3">
+          <div class="md:w-1/2 flex justify-center">
+            <i
+              class="fa-regular fa-lightbulb text-4xl mx-auto bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent"
+            ></i>
+          </div>
+
+          <h1
+            class="text-md md:text-xl text-center  font-semibold text-white"
+          >
+            Big Ideas, Smart Budgets:
+          </h1>
+          <p class="text-md text-center ">
+            I'll work with you to find creative solutions <br />that fit your
+            financial picture perfectly.
+          </p>
+        </div>
+        <div class="w-full md:w-[33.3%] space-y-3">
+          <div class=" flex justify-center">
+            <i
+              class="fa-regular fa-compass text-4xl mx-auto bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent"
+            ></i>
+          </div>
+
+          <h1
+            class="text-md md:text-xl text-center  font-semibold text-white"
+          >
+            Creative Compass Check:
+          </h1>
+          <p class="text-md text-center ">
+            Explore our work and see if it's bursting with <br /> creativity and
+            inspires excitement for potential collaboration.
+          </p>
+        </div>
+        <div class="w-full md:w-[33.3%] space-y-3">
+          <div class="md:w-1/2 flex justify-center">
+            <i
+              class="fa-regular fa-handshake text-4xl mx-auto bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent"
+            ></i>
+          </div>
+          <h1
+            class="text-md md:text-xl text-center  font-semibold text-white"
+          >
+            Building Trust Under Pressure:
+          </h1>
+          <p class="text-md text-center ">
+            We are experienced in handling high-pressure situations and ensure
+            we can maintain focus and deliver quality work under tight
+            deadlines.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="h-[200vh] bg-black">
+      <TabsComponent client:load />
+    </section>
+
+    <section
+      class="bg-white flex flex-col justify-around space-y-20 items-center animate text-black p-6 h-auto"
+    >
+      <div class="space-y-2">
+        <h1 class="font-semibold  text-4xl md:text-5xl text-center">
+          Who benefits from <br /> our services the most?
+        </h1>
+
+        <h5 class="text-md md:text-lg text-gray-600 text-center">
+          Well, we are not perfect for everyone. <br />Here's who we work with
+        </h5>
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-center px-10 ">
+        <div class="card border border-gray-300 space-y-5 md:space-y-10">
+
+          <i class="fa-solid fa-rocket text-4xl md:text-6xl"></i>
+
+          <h1 class="font-bold text-2xl md:text-4xl ">Startups & VC-funds</h1>
+          <p class="text-slate-700">
+            We love working on new exciting products. If you need to bring your MVP to life, work on your POC or polish an existing product - we're here to help! Our app designs break launch records and receive stellar ratings. You'll be in good hands.
+          </p>
+        </div>
+
+        <div class="card border border-gray-300 md:border-l-0 space-y-5 md:space-y-10">
+          <i class="fa-solid fa-suitcase text-4xl md:text-6xl"></i>
+          <h1 class="font-bold text-2xl md:text-4xl ">Creative Agencies</h1>
+          <p class="text-slate-700">
+            We have a really good synergy with SEO and design agencies. You don't need to hire a full-time employee and keep him busy; outsource your work to us and we’ll most likely exceed your expectations. We work with Webflow, Framer, and WordPress.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</PageLayout>

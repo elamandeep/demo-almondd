@@ -1,0 +1,46 @@
+---
+import { SITE, LINKS } from "@consts";
+import { cn } from "@lib/utils";
+const { pathname } = Astro.url;
+const subpath = pathname.match(/[^/]+/g);
+import { Picture } from "astro:assets";
+import myImage from "../assets/logo.png";
+---
+
+<header
+  id="header"
+  class="fixed top-0 w-full h-16 z-50 flex justify-between p-3"
+>
+  <div class="flex justify-between w-full items-center">
+    <div class="relative w-40 h-12">
+      <Picture
+        src={myImage}
+        formats={["webp", "avif"]}
+        class="absolute w-full h-full"
+        alt="A description of my image."
+      />
+    </div>
+
+    <button class="text-white p-2">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<style>
+  #header-drawer-button > #drawer-open {
+    @apply block;
+  }
+
+  #header-drawer-button > #drawer-close {
+    @apply hidden;
+  }
+
+  #header-drawer-button.open > #drawer-open {
+    @apply hidden;
+  }
+
+  #header-drawer-button.open > #drawer-close {
+    @apply block;
+  }
+</style>

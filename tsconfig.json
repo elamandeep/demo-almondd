@@ -2,7 +2,7 @@
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     "strictNullChecks": true,
-    "baseUrl": "/home/elamandeep/Desktop/programs/almondd",
+    "baseUrl": ".",
     "paths": {
       "@*": [
         "src/*"

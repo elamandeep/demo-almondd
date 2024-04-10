@@ -8,7 +8,7 @@ const NavButton = () => {
     return (
         <>
             <button className="text-white p-2" onClick={() => toggle()}>
-                {!isActive ? <i className="ph-bold ph-list text-md"></i> : <i className="ph ph-x text-md"></i>}
+                {!isActive ? <i className="ph-bold ph-list text-3xl"></i> : <i className="ph ph-x text-3xl"></i>}
             </button>
         </>
     )

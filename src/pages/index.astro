@@ -4,6 +4,7 @@ import { SITE, SOCIALS } from "@consts";
 import TwinklingStars from "@components/TwinklingStars.astro";
 import MeteorShower from "@components/MeteorShower.astro";
 import TabsComponent from "@components/TabComponent";
+import ParallaxScrollComp from "@components/ParallaxScrollComp.astro";
 ---
 
 <PageLayout title="Home" description={SITE.DESCRIPTION}>
@@ -57,16 +58,16 @@ import TabsComponent from "@components/TabComponent";
       class="animate absolute h-full w-full flex items-center justify-center"
     >
       <div class="relative w-full h-full flex items-center justify-center">
-        <div class="p-5 text-center space-y-3">
+        <div class="p-5 text-center space-y-5">
           <!-- <p
             class="animated text-lg md:text-xl lg:text-2xl font-semibold opacity-75"
           >
             Design partners for next-gen tech
           </p> -->
           <p
-            class="animated text-2xl md:text-5xl lg:text-7xl font-bold Captialize text-black dark:text-white"
+            class="animated text-2xl md:text-5xl lg:text-7xl font-bold capitalize text-black dark:text-white text-center"
           >
-            Design partners for next-gen tech
+            Design partners <br/> for next-gen tech
           </p>
           <p class="animated text-sm md:text-base lg:text-lg opacity-75">
             From Prototype to Launchpad, Design Solutions to Fuel for Your Tech
@@ -74,7 +75,7 @@ import TabsComponent from "@components/TabComponent";
           </p>
           <div
             id="ctaButtons"
-            class="animated flex flex-wrap gap-4 justify-center mt-5"
+            class="animated flex flex-wrap gap-4 justify-center pt-5"
           >
             <a
               href="https://topmate.io/madhuri_basant/852589"
@@ -101,10 +102,10 @@ import TabsComponent from "@components/TabComponent";
     </div>
   </section>
 
-  <div class="relative bg-black">
+  <div class="relative bg-black ">
     <div class="absolute -top-10 h-20 bg-black blur-2xl w-full"></div>
     <section
-      class="flex flex-col justify-between bg-black p-8 md:p-16 space-y-12 md:space-y-0 h-auto md:h-[28rem]"
+      class="flex flex-col justify-center  bg-black p-8 md:p-16 space-y-12  md:h-screen"
     >
       <h1 class="text-2xl text-center md:text-3xl text-white font-semibold">
         Growth starts with a strong foundation. <br />We design it, you build on
@@ -116,44 +117,51 @@ import TabsComponent from "@components/TabComponent";
       >
         <div class="w-full md:w-[33.3%] space-y-3">
           <div class="flex justify-center">
-            <i
-              class="ph ph-lightbulb text-4xl mx-auto bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent"
-            ></i>
+
+              <button class="backdrop-blur-sm bg-white/10 rounded-full p-2 w-14 h-14 grid place-items-center">
+                <i
+              class="ph ph-lightbulb text-2xl mx-auto bg-gray-400 bg-clip-text text-transparent"
+              ></i>
+            </button>
           </div>
 
-          <h1 class="text-md md:text-xl text-center font-semibold text-white">
+          <h1 class="text-md text-center font-semibold text-white">
             Big Ideas, Smart Budgets:
           </h1>
-          <p class="text-md text-center">
+          <p class="text-sm text-center">
             I'll work with you to find creative solutions <br />that fit your
             financial picture perfectly.
           </p>
         </div>
         <div class="w-full md:w-[33.3%] space-y-3">
           <div class="flex justify-center">
-            <i
-              class="ph ph-compass text-4xl mx-auto bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent"
+            <button class="backdrop-blur-sm bg-white/10 rounded-full p-2 w-14 h-14 grid place-items-center">
+              <i
+            class="ph ph-compass text-2xl mx-auto bg-gray-400 bg-clip-text text-transparent"
             ></i>
+          </button>
           </div>
 
-          <h1 class="text-md md:text-xl text-center font-semibold text-white">
+          <h1 class="text-md  text-center font-semibold text-white">
             Creative Compass Check:
           </h1>
-          <p class="text-md text-center">
+          <p class="text-sm text-center">
             Explore our work and see if it's bursting with <br /> creativity and
             inspires excitement for potential collaboration.
           </p>
         </div>
         <div class="w-full md:w-[33.3%] space-y-3">
           <div class="flex justify-center">
-            <i
-              class="ph ph-handshake text-4xl mx-auto bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent"
+            <button class="backdrop-blur-sm bg-white/10 rounded-full p-2 w-14 h-14 grid place-items-center">
+              <i
+            class="ph ph-handshake text-2xl mx-auto bg-gray-400 bg-clip-text text-transparent"
             ></i>
+          </button>
           </div>
-          <h1 class="text-md md:text-xl text-center font-semibold text-white">
+          <h1 class="text-md text-center font-semibold text-white">
             Building Trust Under Pressure:
           </h1>
-          <p class="text-md text-center">
+          <p class="text-sm text-center">
             We are experienced in handling high-pressure situations and ensure
             we can maintain focus and deliver quality work under tight
             deadlines.
@@ -165,7 +173,7 @@ import TabsComponent from "@components/TabComponent";
     <section id="" class="h-[200vh] md:h-[150vh] bg-black">
       <TabsComponent client:load />
     </section>
-
+<!-- 
     <section
       class="bg-white flex flex-col justify-around space-y-20 items-center animate text-black p-6 h-auto"
     >
@@ -205,6 +213,12 @@ import TabsComponent from "@components/TabComponent";
           </p>
         </div>
       </div>
+    </section> -->
+
+    <section>
+      <h1 class="text-4xl md:text-6xl text-center font-semibold text-white">Our Works</h1>
+      <ParallaxScrollComp/>
     </section>
+    
   </div>
 </PageLayout>

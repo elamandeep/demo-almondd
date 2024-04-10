@@ -5,11 +5,15 @@ const { pathname } = Astro.url;
 const subpath = pathname.match(/[^/]+/g);
 import { Picture } from "astro:assets";
 import myImage from "../assets/logo.png";
+import NavButton from './NavButton'
+import DropDown from "./DropDown";
+
+
 ---
 
 <header
   id="header"
-  class="fixed top-0 w-full h-16 z-50 flex justify-between p-3"
+  class="fixed top-0 w-full h-16 z-20 flex justify-between p-3"
 >
   <div class="flex justify-between w-full items-center">
     <div class="relative w-32 h-10">
@@ -21,12 +25,11 @@ import myImage from "../assets/logo.png";
       />
     </div>
 
-    <button class="text-white p-2">
-      <i class="fa-solid fa-bars"></i>
-    </button>
+    <NavButton client:load/>
+  
   </div>
 </header>
-
+<DropDown client:only="react" />
 <style>
   #header-drawer-button > #drawer-open {
     @apply block;

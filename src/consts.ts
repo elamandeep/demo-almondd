@@ -60,22 +60,23 @@ export const SOCIALS: Socials = [
     HREF: "mailto:markhorn.dev@gmail.com",
   },
   { 
-    NAME: "Github",
-    ICON: "github",
-    TEXT: "markhorn-dev",
-    HREF: "https://github.com/markhorn-dev/astro-sphere"
-  },
-  { 
     NAME: "LinkedIn",
     ICON: "linkedin",
-    TEXT: "markhorn-dev",
-    HREF: "https://www.linkedin.com/in/markhorn-dev/",
+    TEXT: "almondd",
+    HREF: "https://www.linkedin.com/company/almondd/",
   },
   { 
-    NAME: "Twitter",
-    ICON: "twitter-x",
+    NAME: "Instagram",
+    ICON: "instagram",
     TEXT: "markhorn_dev",
-    HREF: "https://twitter.com/markhorn_dev",
+    HREF: "https://instagram.com/almondd_agency?igshid=YmMyMTA2M2Y=",
+  },
+
+  { 
+    NAME: "Facebook",
+    ICON: "facebook",
+    TEXT: "markhorn_dev",
+    HREF: "https://www.facebook.com/almonddagency",
   },
 ]
 
